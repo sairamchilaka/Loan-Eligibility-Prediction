@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <title>Home page</title>
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            body{
+                background-image: url('/static/pics/loanbg.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+                
+            }
+            .bts{
+                
+                background: rgb(234, 45, 45);
+                border-radius: 6px;
+                border: none;
+                font-weight: bold;
+                height: 40px;
+                border-color: rgb(202,191,193);
+                color: rgb(202,191,193);
+                margin-top: 10px;
+            }
+            .bts:hover{
+                background: rgb(202,191,193);
+                border: 1px solid;
+                font-weight: bold;
+                border-color: rgb(234, 45, 45);
+                color: black;
+            }
+            .t{
+                background-color: rgb(243, 217, 237);
+            }
+            .t:hover{
+                border: 3px solid;
+                border-color: blue;
+            }   
+            .h:hover{
+                font-weight: bold;
+                color: red;
+            }
+        </style>
+    </head>
+    <body> 
+
+        <div class="container-fluid">
+
+           
+            <h1 class="display-1 text-primary text-center h">Loan Eligibility Prediction</h1>
+            
+            <form class="form-horizontal" action="/submit" method="POST">
+                <div class="form-group">
+                <label class="control-label col-sm-2" for="gender">GENDER : </label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control t" id="gender" placeholder="female : 0 or male : 1" name="gender" required>
+                </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="married">MARRIED : </label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control t" id="married" placeholder="single : 0 or married : 1" name="married" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="dependents">DEPENDENTS : </label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control t" id="dependents" placeholder="0 or 1 or 2 or 3 else 4" name="dependents" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="education">EDUCATION : </label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control t" id="education" placeholder="no : 0 or yes : 1" name="education" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="selfemp">SELF_EMPLOYED : </label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control t" id="selfemp" placeholder="no : 0 or yes : 1" name="selfemp" required>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="app">APPLICANT INCOME : </label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control t" id="app" placeholder="Enter Applicant Income" name="app" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="coapp">COAPPLICANT INCOME : </label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control t" id="coapp" placeholder="Enter Coapplicant Income" name="coapp" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="amount">LOAN AMOUNT : </label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control t" id="amount" placeholder="Enter Loan Amount" name="amount" required>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="term">LOAN_TERM : </label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control t" id="term" placeholder="Enter Loan Amount Term" name="term" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="cred">CREDIT_HISTORY : </label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control t" id="cred" placeholder="bad : 0 or good : 1" name="cred" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="area">AREA : </label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control t" id="area" placeholder="0 or 1 or 2" name="area" required>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="control-label col-sm-2"></label>
+                    <div class="col-sm-4">
+                        <button type="submit" class="col-sm-6 bts" value="submit">Submit</button>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+
+    </body>
+</html> 
